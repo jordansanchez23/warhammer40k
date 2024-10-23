@@ -1,0 +1,205 @@
+:root {
+    --primary-color: #003DA5;
+    --secondary-color: #D1A82A;
+    --primary-text-color: white;
+    --secondary-text-color: black;
+    --third-text-color: #C0C0C0;
+    --alternative-color: #002A5C;
+
+    --heading-font: "Bebas Neue", sans-serif;
+    --text-font: "Montserrat", sans-serif;
+    --alternative-font: "Cinzel", serif;
+}
+
+* {
+    font-family: var(--text-font);
+    font-weight: 400;
+    font-style: normal;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/********************************************/
+/*                HEADER                    */
+/********************************************/
+h1, h2, .navigation {
+    font-family: var(--heading-font);
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--primary-text-color);
+}
+
+header img{
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    max-width: 30%;
+    height: auto;
+    max-height: 200px;
+}
+
+nav ul {
+    display: block;
+    list-style-type: none;
+    
+}
+nav ul li a{
+    text-decoration: none;
+    padding: 5px;
+    color: var(--primary-text-color);
+    
+}
+
+nav ul li a:hover{
+    background-color: var(--secondary-color);
+    color: var(--secondary-text-color);
+    
+}
+
+.current-navigation-item {
+    border-bottom: 5px solid var(--secondary-color);
+}
+
+/****************/
+/*    FOOTER    */
+/****************/
+footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--primary-color);
+    margin-top: 10px;
+    padding: 20px;
+}
+
+footer p {
+    color: var(--primary-text-color);
+}
+
+.social-media-tags {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    gap: 10px;
+}
+
+.social-media-tags a{
+    text-decoration: none;
+    color: var(--primary-text-color);
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    margin: 0 10px;
+    padding: 10px;
+    overflow: hidden;
+    border: 2px solid var(--primary-text-color);
+    font-size: 1.5em;
+    transition: color 300ms;
+
+
+}
+
+.social-media-tags a:hover {
+    color: var(--primary-color);
+    background-color: var(--primary-text-color);
+}
+
+/*******************/
+/*      MENU       */
+/*******************/
+#menu {
+    display: block;
+    cursor: pointer;
+    font-size: 2rem;
+    width: 100%;
+    text-align: right;
+    padding: .25rem 2vw;
+    background-color: var(--primary-color);
+    color: var(--primary-text-color);
+    border: none;
+    
+    
+}
+
+#menu::before {
+    content: "\2630";
+}
+
+.show {
+    display: block;
+}
+
+#menu.show::before {
+    content: "X";
+}
+
+.navigation.show {
+    display: block;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+}
+
+.navigation a {
+    display: block;
+    padding: 0.75rem;
+    text-align: right;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.5s;
+}
+
+.navigation a:hover,
+.navigation a:active {
+    color: var(--secondary-text-color);
+    background-color: var(--primary-text-color);
+}
+
+/*******************************************/
+/*                  BODY                   */           
+/*******************************************/
+
+body {
+    background-color: var(--third-text-color);
+    color: var(--secondary-text-color);
+}
+
+
+/*******************************************/
+/*               WIDER VIEW                */           
+/*******************************************/
+@media screen and (max-width: 700px) {
+    .navigation {
+        display: none;
+    }
+
+}
+
+@media screen and (min-width: 701px) {
+    header {
+        display: flex;
+        align-items:flex-end;
+        justify-content: space-between;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-around;
+        background-color: var(--primary-color);
+    }
+
+    #menu {
+        display: none;
+    }
+}

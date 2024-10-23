@@ -1,0 +1,63 @@
+:root {
+    --primary-color: #003DA5;
+    --secondary-color: #D1A82A;
+    --primary-text-color: white;
+    --secondary-text-color: black;
+    --third-text-color: #C0C0C0;
+    --alternative-color: #002A5C;
+
+    --heading-font: "Bebas Neue", sans-serif;
+    --text-font: "Montserrat", sans-serif;
+    --alternative-font: "Cinzel", serif;
+}
+
+/**************************/
+/*       HERO-IMAGE       */
+/**************************/
+.hero {
+    position: relative;
+    margin: 0 auto;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+/**************************/
+/*  CALL TO ACTION BUTTON */
+/**************************/
+
+.call-to-action {
+    position: absolute;
+    right: 15%;
+    bottom: 40px;
+    max-width: 25%;
+    align-items: center;
+    text-align: center;
+    z-index: 50;
+}
+
+.call-to-action a {
+    background-color: var(--secondary-color);
+    color: var(--secondary-text-color);
+    border-radius: 15px;
+    padding: 15px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(255, 244, 244, 0.2);
+    font-size: 1em;
+    z-index: 50;
+}
+
+.call-to-action a:hover {
+    background-color: var(--primary-color);
+    color: var(--primary-text-color)
+}
+
+@media screen and (max-width: 700px) {
+    .call-to-action a {
+        font-size: 0.6em;
+    }
+
+}
