@@ -1,0 +1,47 @@
+:root {
+    --primary-color: #003DA5;
+    --secondary-color: #D1A82A;
+    --primary-text-color: white;
+    --secondary-text-color: black;
+    --third-text-color: #C0C0C0;
+    --alternative-color: #002A5C;
+
+    --heading-font: "Bebas Neue", sans-serif;
+    --text-font: "Montserrat", sans-serif;
+    --alternative-font: "Cinzel", serif;
+}
+
+main {
+    padding: 20px;
+    background-color: var(--primary-text-color) ;
+    max-width: 800px; 
+    margin: 20px auto; 
+    border-radius: 10px; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+}
+
+
+.details-table {
+    margin: 20px 0;
+}
+
+.table {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid var(--third-text-color);
+}
+
+.table:last-child {
+    border-bottom: none; 
+}
+
+.column1 {
+    font-weight: bold;
+    font-family: var(--text-font)
+}
+
+.column2 {
+    color: #555;
+    font-family: var(--alternative-font); 
+}

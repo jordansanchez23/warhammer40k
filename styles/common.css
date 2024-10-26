@@ -50,6 +50,7 @@ nav ul li a{
     text-decoration: none;
     padding: 5px;
     color: var(--primary-text-color);
+    font-family: var(--alternative-font);
     
 }
 
@@ -78,6 +79,7 @@ footer {
 
 footer p {
     color: var(--primary-text-color);
+    font-family: var(--alternative-font);
 }
 
 .social-media-tags {

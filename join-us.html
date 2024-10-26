@@ -8,25 +8,25 @@
     <meta name="author" content="Jordan Sanchez">
 
     <!--Open Graph for Facebook-->
-    <meta property="og:title" content="Vista Chamber Home Page" >
+    <meta property="og:title" content="Warhammer 40K Nexus Join Us Page" >
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://www.wargamer.com/wp-content/uploads/2021/06/warhammer-40k-ultramarines-guide-guilliman-and-warriors-fighting-black-legion.jpg">
-    <meta property="og:url" content="https://jordansanchez23.github.io/warhammer40k/index">
+    <meta property="og:url" content="https://jordansanchez23.github.io/warhammer40k/join-us">
     <meta property="og:description" content="This page contains some attention grabbing information along with community, information, weather, calls to action, and busines spotlights">
 
 
     <!--Twitter Cards-->
-    <meta name="twitter:title" content="Vista Chamber Home Page">
+    <meta name="twitter:title" content="Warhammer 40K Nexus Join Us Page">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="https://www.wargamer.com/wp-content/uploads/2021/06/warhammer-40k-ultramarines-guide-guilliman-and-warriors-fighting-black-legion.jpg">
-    <meta name="twitter:url" content="https://jordansanchez23.github.io/warhammer40k/index">
+    <meta name="twitter:url" content="https://jordansanchez23.github.io/warhammer40k/join-us">
     <meta name="twitter:description" content="Discover information about the lore, books, video games, movies, board games, and fascinating insights into this captivating history. ">
 
 
     <!--Styles-->
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/common.css">
-    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/join-us.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -46,23 +46,48 @@
         </nav>
     </header>
     <main>
-        <div class="hero">
-            <img src="images/hero-image.jpeg" alt="Hero Image of an Ultramarine">
-            <div class="call-to-action">
-            <a href="join-us.html">Join Us!</a>
-            </div>
-        </div>
-        <h1>Home</h1>
-        <div class="cards">
-            <div class="events-card" id="events-card">
-                <h2>Events</h2>
-            <p><strong>Lorem ipsum dolor sit amet consectetur adipisicing elit.</strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. A nihil, commodi praesentium libero eum unde illum sunt tenetur possimus nobis debitis quos fugit saepe dolorum voluptates explicabo quasi delectus ut!</p>
-            </div>
-            <div class="weather-card" id="weather-card"></div>
-            <div class="forecast-card" id="forecast-card"></div>
-            </div>
-            <div class="spotlights">
-            <div class="premium-card"></div>
+        <div class="form-section">
+            <h1>Join the Warhammer 40k Faction</h1>
+            <form action="thankyou.html" method="get">
+                <fieldset>
+                    <legend>Applicant Information</legend>
+                    <label for="firstName">First Name: 
+                        <input type="text" name="firstName" id="firstName" autocomplete="given-name" required>
+                    </label>
+                    <label for="lastName">Last Name: 
+                        <input type="text" name="lastName" id="lastName" autocomplete="family-name" required>
+                    </label>
+                    <label for="email">Email: 
+                        <input type="email" name="email" id="email" autocomplete="email" required placeholder="warrior@example.com">
+                    </label>
+                    <label for="phoneNumber">Contact Number: 
+                        <input type="tel" name="phoneNumber" id="phoneNumber" autocomplete="tel" required>
+                    </label>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Select Your Faction</legend>
+                    <label for="faction">Choose Your Race: 
+                        <select name="faction" id="faction" required>
+                            <option value="" selected disabled>Select your faction...</option>
+                            <option value="imperium">Imperium of Man 🛡️</option>
+                            <option value="chaos">Chaos 🔥</option>
+                            <option value="xenos">Xenos 🌌</option>
+                            <option value="orcs">Orks 🏴‍☠️</option>
+                            <option value="necrons">Necrons ⚙️</option>
+                            <option value="tau">Tau Empire 🚀</option>
+                            <option value="eldar">Eldar 🌟</option>
+                            <option value="tyranids">Tyranids 🐍</option>
+                        </select>
+                    </label>
+                    <label for="bio">Your Battle History: 
+                        <textarea name="bio" id="bio" placeholder="Share your notable battles and experiences..."></textarea>
+                    </label>
+                    <input type="hidden" name="timeStamp" id="timeStamp">
+                </fieldset>
+                
+                <button type="submit">Join the Fight!</button>
+            </form>
         </div>
     </main>
     <footer>
@@ -81,9 +106,7 @@
             <p>Last Modified: <span id="lastModified"></span></p>
         </div>
     </footer>
-    <!--<script src="scripts/weather.js" type="module"></script>
-    <script src="scripts/forecast.js" type="module"></script>
-    <script src="scripts/spotlight.js" type="module"></script>-->
     <script src="scripts/common.js" defer></script>
+    <script src="scripts/join.js" defer></script>
 </body>
 </html>

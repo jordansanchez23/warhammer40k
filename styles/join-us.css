@@ -1,0 +1,53 @@
+:root {
+    --primary-color: #003DA5;
+    --secondary-color: #D1A82A;
+    --primary-text-color: white;
+    --secondary-text-color: black;
+    --third-text-color: #C0C0C0;
+    --alternative-color: #002A5C;
+
+    --heading-font: "Bebas Neue", sans-serif;
+    --text-font: "Montserrat", sans-serif;
+    --alternative-font: "Cinzel", serif;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    margin: 15px auto;
+    background-color: rgb(214, 210, 210);
+    justify-content: left;
+}
+
+fieldset>label, fieldset>legend {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    text-align: left;
+}
+
+button {
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+    background-color: var(--primary-color);
+    color: var(--primary-text-color);
+    font-size: 1.2em;
+    margin: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    color: var(--secondary-text-color);
+    background-color: var(--secondary-color);
+}
