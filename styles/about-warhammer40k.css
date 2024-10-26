@@ -1,0 +1,26 @@
+:root {
+    --primary-color: #003DA5;
+    --secondary-color: #D1A82A;
+    --primary-text-color: white;
+    --secondary-text-color: black;
+    --third-text-color: #C0C0C0;
+    --alternative-color: #002A5C;
+
+    --heading-font: "Bebas Neue", sans-serif;
+    --text-font: "Montserrat", sans-serif;
+    --alternative-font: "Cinzel", serif;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.members-card {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+}
+.members-card.list {
+    grid-template-columns: 1fr; 
+}

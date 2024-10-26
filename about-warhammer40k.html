@@ -26,7 +26,7 @@
     <!--Styles-->
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/common.css">
-    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/about-warhammer40k.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -46,24 +46,45 @@
         </nav>
     </header>
     <main>
-        <div class="hero">
-            <img src="images/hero-image.jpeg" alt="Hero Image of an Ultramarine">
-            <div class="call-to-action">
-            <a href="join-us.html">Join Us!</a>
-            </div>
+        <div class="summary">
+            <h1>History about Warhammer 40K</h1>
+            <p>The primarchs were the 20 genetically-engineered transhuman "sons" of the Emperor of Mankind created in the late 30th Millennium. They were intended to be the immortal and superhuman generals and proconsuls who would command the Emperor's Great Crusade to reunite the scattered Human race beneath His leadership. Their genomes later served as the genetic templates from which the Emperor crafted His 20 Space Marine Legions.</p>
+            <p>The primarchs were bred to be perfect generals, warriors and statesmen; larger, stronger, faster, and smarter than any normal Human could ever hope to be. They possessed a potent charisma and martial prowess that made them like the mythical gods of old, untouchable by disease, old age or supposedly the petty failings of lesser men.</p>
+            <p>Each embodied an aspect of war; one was the greatest strategist ever known, another the personification of the terror of war, a third the master of psychic powers, a fourth the greatest practitioner of the arts of fortification, and so on. The primarchs were the Emperor's answer to reclaiming all the lost worlds of Mankind, and welcoming them into His new Imperium.</p>
+            <p>The Emperor intended to raise His sons to be the best military commanders and political leaders in Human history. They would bring the Imperial Truth to the rest of the Human-settled galaxy in their father's name, serving as His generals and proconsuls.</p>
+            <p>But the Chaos Gods intervened to foil their great adversary's plans and the primarchs were sprited away through the Warp to other Human-settled planets of the galaxy. Deprived of the Emperor's care and guidance, each developed a personality uniquely shaped -- and sometimes damaged -- by the difficult circumstances of their homeworlds.</p>
+            <p>Yet for all their gifts, the primarchs were still only men, and in the end their all-too-Human flaws would become the primary obstacle to the realisation of the Emperor's great dream for Mankind.</p>
+            <figure>
+                <img src="images/The-Primarchs.webp" alt="The Primarchs">
+                <figcaption>"They shall be my sons, and in them will live the hopes of a unified Humanity. Theirs will be the strength to prevail, not only when victory lies within easy reach, but even when it seems unattainable, when doom settles like a shroud all about. In those times of darkness, my noble sons will shine the brightest of all." — Attributed to the Emperor of Mankind</figcaption>
+            </figure>
+
         </div>
-        <h1>Home</h1>
-        <div class="cards">
-            <div class="events-card" id="events-card">
-                <h2>Events</h2>
-            <p><strong>Lorem ipsum dolor sit amet consectetur adipisicing elit.</strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. A nihil, commodi praesentium libero eum unde illum sunt tenetur possimus nobis debitis quos fugit saepe dolorum voluptates explicabo quasi delectus ut!</p>
-            </div>
-            <div class="weather-card" id="weather-card"></div>
-            <div class="forecast-card" id="forecast-card"></div>
-            </div>
-            <div class="spotlights">
-            <div class="premium-card"></div>
+
+        <button id="grid-list">Toggle Grid/List</button>
+
+        <div id="cards-area">
+            <div class="members-card"></div>
         </div>
+
+        
+        <dialog id="primarchModal">
+            <button id="closeModal">X</button>
+            <div id="modalContent">
+                <h2 id="modalTitle"></h2>
+                <img id="modalImage" alt="Primarch Image" />
+                <p id="modalLegion"></p>
+                <p id="modalHomeworld"></p>
+                <p id="modalSkills"></p>
+                <p id="modalAllegiance"></p>
+                <p id="modalBiography"></p>
+                <p id="modalSpecialWeapons"></p>
+                <p id="modalNotableBattles"></p>
+                <p id="modalLegionTraits"></p>
+                <p id="modalStatus"></p>
+                <p id="modalMotto"></p>
+            </div>
+        </dialog>
     </main>
     <footer>
         <div class="blank-space">
@@ -82,8 +103,8 @@
         </div>
     </footer>
     <!--<script src="scripts/weather.js" type="module"></script>
-    <script src="scripts/forecast.js" type="module"></script>
-    <script src="scripts/spotlight.js" type="module"></script>-->
+    <script src="scripts/forecast.js" type="module"></script>-->
+    <script src="scripts/displayCards.mjs" type="module"></script>
     <script src="scripts/common.js" defer></script>
 </body>
 </html>
