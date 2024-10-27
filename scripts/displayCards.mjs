@@ -13,7 +13,7 @@ closeModalButton.addEventListener("click", () => {
 });
 
 
-const primarchs = "/data/primarchs.json";
+const primarchs = "data/primarchs.json";
 getMemberData(primarchs);
 
 //Display between grid or list //
