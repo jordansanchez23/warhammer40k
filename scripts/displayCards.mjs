@@ -1,4 +1,4 @@
-import { getMemberData } from "./modalfunctions.mjs";
+import { getMemberData } from "./modalFunctions.mjs";
 
 const closeModalButton = document.querySelector("#closeModal");;
 
