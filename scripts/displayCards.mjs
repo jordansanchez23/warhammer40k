@@ -22,5 +22,3 @@ listDisplay.addEventListener("click", () => {
 });
 
 getMemberData(primarchs);
-
-export {primarchs};

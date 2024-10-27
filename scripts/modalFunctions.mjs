@@ -2,9 +2,16 @@ const modal = document.querySelector("#primarchModal");
 const membersCards = document.querySelector(".members-card");
 
 async function getMemberData(primarchs) {
-    const response = await fetch(primarchs);
-    const data = await response.json();
-    displayPrimarchs(data.primarchs);
+    try {
+        const response = await fetch(primarchs);
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
+        displayPrimarchs(data.primarchs);
+    } catch (error) {
+        console.error('Error fetching primarch data:', error);
+    }
 }
 
 const displayPrimarchs = (primarchs) => {
