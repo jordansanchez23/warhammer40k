@@ -1,7 +1,7 @@
 import { getMemberData } from "./modalfunctions.mjs";
 
 const closeModalButton = document.querySelector("#closeModal");;
-const primarchs = "data/primarchs.json";
+const primarchs = "/data/primarchs.json";
 
 //Close the modal
 closeModalButton.addEventListener("click", () => {
