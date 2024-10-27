@@ -67,9 +67,9 @@ const showModal = (primarch) => {
     document.querySelector("#modalHomeworld").textContent = `Homeworld: ${primarch.homeworld}`;
     document.querySelector("#modalSkills").textContent = `Skills: ${primarch.skills}`;
     document.querySelector("#modalAllegiance").textContent = `Allegiance: ${primarch.allegiance}`;
-    document.querySelector("#modalBiography").textContent = `Biography ${primarch.biography}`;
-    document.querySelector("#modalSpecialWeapons").textContent = `Special Weapons ${primarch.specialWeapons}`;
-    document.querySelector("#modalNotableBattles").textContent = `Notable Battles ${primarch.notableBattles}`;
+    document.querySelector("#modalBiography").textContent = `Biography: ${primarch.biography}`;
+    document.querySelector("#modalSpecialWeapons").textContent = `Special Weapons: ${primarch.specialWeapons}`;
+    document.querySelector("#modalNotableBattles").textContent = `Notable Battles: ${primarch.notableBattles}`;
     document.querySelector("#modalLegionTraits").textContent = `Legion Traits: ${primarch.legionTraits}`;
     document.querySelector("#modalStatus").textContent = `Status: ${primarch.status}`;
     document.querySelector("#modalMotto").textContent = `Motto: ${primarch.motto}`;

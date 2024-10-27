@@ -16,11 +16,214 @@ main {
     margin: 0 auto;
 }
 
+/*******************/
+/*     SUMMARY     */
+/*******************/
+.summary p {
+    text-align: justify;
+    text-align-last: left;
+    margin: 5px auto;
+    line-height: 2rem;
+    padding: 5px;
+}
+
+/*******************/
+/*    ANIMATION    */
+/*******************/
+.summary p {
+    animation: 1s ease-out 0s 1 slideInFromRight;
+}
+
+@keyframes slideInFromRight {
+    0% {
+      transform: translateX(300%);
+      
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1; 
+    }
+}
+
+.summary p:nth-child(1) {
+    animation-delay: 0s; 
+}
+
+.summary p:nth-child(2) {
+    animation-delay: 0.2s; 
+}
+
+.summary p:nth-child(3) {
+    animation-delay: 0.4s; 
+}
+
+.summary p:nth-child(4) {
+    animation-delay: 0.6s; 
+}
+
+.summary p:nth-child(5) {
+    animation-delay: 0.8s; 
+}
+
+.summary p:nth-child(6) {
+    animation-delay: 0.9s; 
+}
+
+/**************************/
+/*  FIGURE FROM PRIMARCHS */
+/**************************/
+figure {
+    position: relative;
+}
+
+figure img {
+    border: 5px solid var(--primary-text-color);
+    width: 100%;
+    height: auto;
+}
+
+figcaption {
+    position: absolute; 
+    top: 30px; 
+    color: var(--primary-text-color);
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 5px; 
+    border-radius: 5px; 
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    font-family: var(--alternative-font);
+}
+
+
+/*****************/
+/* TOGGLE BUTTON */
+/*****************/
+#grid-list {
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: var(--text-font);
+    padding: 5px;
+    color: var(--secondary-text-color);
+}
+
+#grid-list:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    background-color: var(--secondary-color);
+}
+
+/*Grid View*/
+
 .members-card {
     display: grid;
     gap: 1rem;
     grid-template-columns: repeat(3, 1fr);
+    margin: 20px;
 }
+
+/*List View*/
 .members-card.list {
     grid-template-columns: 1fr; 
 }
+
+.members-card.list .member-card {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin: 0 auto;
+}
+
+/********************/    
+/*   CARDS DESIGN   */     
+/********************/     
+.member-card, #primarchModal {
+    border: 5px solid var(--primary-text-color);
+    border-radius: 20px;
+    background-color: var(--secondary-color);
+}
+
+.member-card {
+    cursor: pointer;
+}
+
+.member-card img {
+    border-radius: 20px;
+}
+
+.member-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+}
+
+/********************/
+/*   MODAL DESIGN   */
+/********************/
+#primarchModal {
+    background-color: var(--secondary-color);
+    border-radius: 50px;
+    border: 5px solid var(--secondary-text-color);
+}
+#primarchModal img {
+    border-radius: 20px;
+    border: 5px solid var(--third-text-color);
+}
+
+#primarchModal::backdrop {
+    position: fixed;      
+    top: 0;               
+    left: 0;              
+    width: 100%;          
+    height: 100%;         
+    background-color: rgba(0, 0, 0, 0.8); 
+    z-index: 1040;  
+}
+
+#primarchModal p {
+    font-family: var(--alternative-font);
+    font-weight: bold;
+    max-width: 50%;
+    margin: 20px auto;
+}
+
+#modalContent {
+    margin: 10px 10px;
+}
+
+/*************************/
+/*      CLOSE BUTTON     */
+/*************************/
+
+#closeModal {
+    display: inline-block;
+    color: var(--secondary-text-color); 
+    background-color: var(--third-text-color); 
+    border-radius: 100%; 
+    width: 30px; 
+    height: 30px; 
+    text-align: center; 
+    line-height: 30px; 
+    font-size: 20px; 
+    font-family: var(--heading-font);
+    cursor: pointer; 
+    position: absolute; 
+    top: 10px; 
+    right: 10px; 
+}
+
+#closeModal:hover {
+    background-color: var(--primary-color); 
+}
+
+
+/**************************/
+/*      SMALL VIEW        */
+/**************************/
+@media screen and (max-width: 700px) {
+    figcaption {
+        position: relative; 
+        top: auto; 
+        left: auto; 
+        margin-top: 10px; 
+        text-align: center; 
+    }
+
+}
+
+

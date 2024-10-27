@@ -64,7 +64,7 @@ main {
 }
 
 /**************************/
-/*        CARDS           */
+/*         CARDS          */
 /**************************/
 .cards, .mainCharacters {
     display: flex;
@@ -74,7 +74,7 @@ main {
 }
 
 .history, .weather-card, .chaosGods, .emperorOfMankind, .eldars {
-    flex: 1 1 calc(45% - 20px); /* Adjust for spacing */
+    flex: 1 1 calc(45% - 20px); 
     margin: 10px;
     padding: 15px;
     border: 1px solid #ddd;
@@ -88,10 +88,32 @@ main {
     
 }
 
+.chaosGods img,
+.emperorOfMankind img,
+.eldars img {
+    max-width: 100%; 
+    height: auto; 
+}
+
+
+/*************************/
+/*     SMALL SCREENS     */
+/*************************/
 
 @media screen and (max-width: 700px) {
     .call-to-action a {
         font-size: 0.6em;
+    }
+
+    .mainCharacters, .cards {
+        display: grid; 
+        grid-template-columns: 1fr;
+        gap: 10px; 
+        padding: 10px; 
+    }
+
+    .chaosGods, .emperorOfMankind, .eldars {
+        margin: 0; 
     }
 
 }
