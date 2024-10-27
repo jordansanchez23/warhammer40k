@@ -11,6 +11,14 @@
     --alternative-font: "Cinzel", serif;
 }
 
+h1,h2 {
+    font-family: var(--heading-font);
+}
+
+main {
+    font-family: var(--text-font);
+}
+
 /**************************/
 /*       HERO-IMAGE       */
 /**************************/
@@ -54,6 +62,32 @@
     background-color: var(--primary-color);
     color: var(--primary-text-color)
 }
+
+/**************************/
+/*        CARDS           */
+/**************************/
+.cards, .mainCharacters {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.history, .weather-card, .chaosGods, .emperorOfMankind, .eldars {
+    flex: 1 1 calc(45% - 20px); /* Adjust for spacing */
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.emperorOfMankind>figcaption {
+    font-family: var(--alternative-font);
+    
+}
+
 
 @media screen and (max-width: 700px) {
     .call-to-action a {
