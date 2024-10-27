@@ -1,7 +1,6 @@
 import { getMemberData } from "./modalfunctions.mjs";
 
 const closeModalButton = document.querySelector("#closeModal");;
-const primarchs = "/data/primarchs.json";
 
 //Close the modal
 closeModalButton.addEventListener("click", () => {
@@ -13,6 +12,10 @@ closeModalButton.addEventListener("click", () => {
     }
 });
 
+
+const primarchs = "/data/primarchs.json";
+getMemberData(primarchs);
+
 //Display between grid or list //
 const listDisplay = document.querySelector("#grid-list");
 const cardsArea = document.querySelector("#cards-area");
@@ -20,5 +23,3 @@ const cardsArea = document.querySelector("#cards-area");
 listDisplay.addEventListener("click", () => {
     cardsArea.classList.toggle("list");
 });
-
-getMemberData(primarchs);
