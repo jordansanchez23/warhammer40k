@@ -1,0 +1,35 @@
+:root {
+    --primary-color: #003DA5;
+    --secondary-color: #D1A82A;
+    --primary-text-color: white;
+    --secondary-text-color: black;
+    --third-text-color: #C0C0C0;
+    --alternative-color: #002A5C;
+
+    --heading-font: "Bebas Neue", sans-serif;
+    --text-font: "Montserrat", sans-serif;
+    --alternative-font: "Cinzel", serif;
+}
+
+.main-references ul li a{
+    text-decoration: none;
+    padding: 5px;
+    color: var(--secondary-text-color);
+    font-family: var(--heading-font);
+    font-size: 2rem;
+    line-height: 2em;
+}
+
+.main-references ul li a:hover{
+    color: var(--secondary-color); 
+}
+
+.main-references > h1 {
+    border-bottom: 5px solid var(--secondary-color);
+    display: inline-block;
+}
+
+.references {
+    border: 2px solid var(--secondary-color);
+    border-radius: 15px;
+}

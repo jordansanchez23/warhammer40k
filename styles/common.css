@@ -82,6 +82,11 @@ footer p {
     font-family: var(--alternative-font);
 }
 
+.references {
+    padding:  15px;
+    gap: 10px;
+}
+
 .social-media-tags {
     display: flex;
     justify-content: center;
@@ -90,7 +95,7 @@ footer p {
     gap: 10px;
 }
 
-.social-media-tags a{
+.social-media-tags a, .references a{
     text-decoration: none;
     color: var(--primary-text-color);
     width: 50px;
@@ -106,7 +111,7 @@ footer p {
 
 }
 
-.social-media-tags a:hover {
+.social-media-tags a:hover, .references a:hover {
     color: var(--primary-color);
     background-color: var(--primary-text-color);
 }
